@@ -33,7 +33,7 @@
 			(function() {
 			var getData = function() {
 				$.ajax({
-					url: "init.php",	
+					url: "data.php",	
 					success: function(data) {
 						div.innerHTML = data;
 					}
