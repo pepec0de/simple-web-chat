@@ -4,4 +4,4 @@ It works!!!!!
 
 $ TODO list:
   - Comment all the code ;-;.
-  - Create a .sql file for the database structure.
+  - Create a .sql file to explain the simple database structure.
