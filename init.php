@@ -38,7 +38,25 @@
 		}
 		return -1;
 	}
+	/*
+        	GET DATA ORIGINAL FUNC
+		<?php
+			include "dbh.php";
 
+			$sql = "SELECT * FROM posts;";
+			$query = pg_query($connection, $sql);
+
+			if (count($query) > 0) {
+				// Output all the data of each row
+				while($row = pg_fetch_row($query)) {
+					echo "[".$row[3]."] &lt".$row[1]."&gt ".$row[2]."<br>";
+				}
+			} else {
+				echo "No data";
+			}
+			pg_close($connection);
+		?>
+	*/
 	function getData() {
 		$output = "";
 		$dbconn = pg_connect("host='".DB_HOST."' port='".DB_PORT."' dbname='".DB_NAME."' user='".DB_USER."' password='".DB_PASSWORD."'") or die("CONN ERROR");
