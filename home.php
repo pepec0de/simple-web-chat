@@ -30,17 +30,20 @@
 		</div>
 		<script>
 			var div = document.getElementById('output');
+			var data = '<?php echo getData(); ?>';
 			(function() {
-			var getData = function() {
-				$.ajax({
+			var printData = function() {
+				div.innerHTML = data;
+				// Old func
+				/*$.ajax({
 					url: "data.php",	
 					success: function(data) {
 						div.innerHTML = data;
 					}
-				}); 
+				});*/ 
                 	};
-			window.setInterval(getData, 1000);
-			getData();})();
+			window.setInterval(printData, 1000);
+			printData();})();
 		</script>
 	</body>
 </html>
