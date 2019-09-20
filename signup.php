@@ -6,12 +6,16 @@
 		header("Location: index.php");
 		die();
 	}
+
 	$username = $_POST['username'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 	
 	$sql = "INSERT INTO users(username, email, password) VALUES('$username', '$email', '$password');";
-	$query = pg_send_query($connection, $sql);
 	
+	if(!pg_connection_busy($dbconn)) {
+		$query = pg_query($connection, $sql);
+	}
+
 	header("Location: index.php");
 ?>
